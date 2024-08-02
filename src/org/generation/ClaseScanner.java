@@ -32,21 +32,28 @@ public class ClaseScanner { //Cambie el nombre de la clase
 					System.out.println("Empate");
 						} else {
 								int ganador = 2; // se cambia el nombre de la variable 2 para ser mas claros
+								
 								switch(jugadorUno) {
 								case "piedra":
 									if (jugadorDos.equals("tijeras")) {
 										ganador = 1;
-									}
+									}else if(jugadorDos.equals("papel")) {
+										ganador = 2;
+									}break;
 
 								case "papel":
 									if (jugadorDos.equals("piedra") ) {
-										ganador = 1;}
+										ganador = 1;
+									}else if (jugadorDos.equals("tijeras")){
+										ganador = 2;
+									}break;
 		          
 								case "tijera":
 										if (jugadorDos.equals("papel")) { //.equals en todo, aqui descubri este metodo
 											ganador = 1;
-										}
-										break;
+									}else if(jugadorDos.equals("piedra")) {
+											ganador = 2;
+									}break;
 									default:
 									}
 									System.out.println("Gana el jugador " + ganador);
